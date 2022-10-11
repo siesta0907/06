@@ -1,13 +1,16 @@
 #1916513
-#06-01
 #include <stdio.h>
-void func(void) {
-	int x;
-	printf("func1 x is at %p\n", &x);
+
+void print_star()
+{
+int i;
+for( i = 0; i < 10; i++ )
+printf("*");
 }
-int main(void) {
-	int x;
-	printf("main x is at %p\n", &x);
-	func();
-	return 0;
+int main(void)
+{
+print_star();
+print_star();
+print_star();
+return 0;
 }
