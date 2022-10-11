@@ -1,16 +1,20 @@
 #1916513
 #include <stdio.h>
 
-void print_star()
+int sumTwo(int a, int b)
 {
-int i;
-for( i = 0; i < 10; i++ )
-printf("*");
+	return a+b;
+}
+int square(int n){
+	return n*n;
+}
+int get_max(int x, int y){
+	if (x>y) return x;
+	else return y;
 }
 int main(void)
 {
-print_star();
-print_star();
-print_star();
-return 0;
+	printf("2 + 5 = %d\n", sumTwo(2,5));
+	printf("9^2 = %d\n", square(9));
+	printf("%d\n", get_max(10,14));
 }
