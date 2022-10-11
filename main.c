@@ -1,13 +1,27 @@
 #1916513
 #include <stdio.h>
 
-void square(int a){
-	a = a*a;
+int combination(int n, int r){
+	return factorial(n)/(factorial(n-r)*factorial(r));
+}
+
+int factorial(int a){
+	int res = 1;
+	int i;
+	for (i =1; i<=a; i ++){
+		res *= i;
+	}
+	return res;
 }
 
 int main(void)
 {
-	int a = 2;
-	square(a);
-	printf("a = %i\n",a);
+	int n,r;
+	
+	printf("n을 입력하세요: ");
+	scanf("%d", &n);
+	printf("r을 입력하세요: ");
+	scanf("%d", &r);
+
+	printf("결과값은 %d입니다.",combination(n,r));
 }
